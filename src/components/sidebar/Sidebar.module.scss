@@ -1,0 +1,43 @@
+.container {
+	@apply bg-dark rounded-3xl h-full py-6 flex flex-col justify-between dark:bg-accent;
+
+	min-width: 265px;
+}
+
+.theme {
+	> div {
+		@apply first:my-6;
+
+		> ul {
+			> li {
+				@apply flex items-center w-full px-14 h-14 cursor-pointer;
+			}
+		}
+	}
+}
+
+.nav {
+	@apply text-white;
+
+	> h3 {
+		@apply text-2xl px-14 h-14 flex items-center;
+	}
+
+	> ul {
+		> li {
+			@apply h-14 hover:text-gray hover:bg-accent transition-all;
+
+			> a {
+				@apply flex items-center h-full w-full px-14;
+			}
+
+			&.active {
+				@apply text-accent hover:text-gray;
+			}
+
+			.icon {
+				@apply mr-2;
+			}
+		}
+	}
+}

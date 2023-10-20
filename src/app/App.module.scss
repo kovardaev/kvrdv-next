@@ -1,0 +1,48 @@
+.body {
+	@apply bg-black dark:bg-white h-screen p-2;
+
+	display: grid;
+	gap: 8px;
+	grid-template-columns: max-content auto;
+
+	.content {
+		overflow-y: scroll;
+	}
+}
+
+.container {
+	@apply py-14 bg-dark rounded-3xl flex text-white justify-center;
+
+	.imagesContainer {
+		@apply flex overflow-hidden pr-14;
+
+		> img {
+			@apply self-start;
+		}
+	}
+
+	.infoContainer {
+		@apply [&>*:nth-child(2)]:my-14;
+
+		> div {
+			> h3 {
+				@apply text-2xl flex items-center pt-1 mb-6;
+
+				> svg {
+					@apply mr-2;
+				}
+			}
+
+			> p {
+				@apply font-light;
+				max-width: 600px;
+			}
+
+			> div {
+				> button {
+					@apply first:mr-2;
+				}
+			}
+		}
+	}
+}

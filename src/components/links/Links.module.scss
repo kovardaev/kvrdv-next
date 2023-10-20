@@ -1,0 +1,18 @@
+.container {
+	@apply text-gray text-2xl mt-2 mb-2 h-20 rounded-full flex;
+
+	> a {
+		@apply rounded-full bg-dark w-max px-6 pt-6 mr-2 last:mr-0 transition-all hover:opacity-70;
+
+		animation: slide 1s;
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(-500%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

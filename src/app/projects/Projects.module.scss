@@ -1,0 +1,51 @@
+.container {
+	@apply flex flex-row gap-2;
+
+	> div {
+		@apply flex flex-col gap-2;
+
+		width: 50%;
+
+		.project {
+			@apply bg-dark rounded-xl p-14 text-white [&>*:nth-child(2)]:my-10 flex flex-col;
+
+			.info {
+				@apply flex flex-col max-w-fit;
+
+				> div {
+					@apply flex mb-6;
+
+					> img {
+						@apply rounded-full w-24 h-24 mr-6;
+					}
+				}
+
+				> p {
+					@apply font-light;
+				}
+			}
+
+			h3 {
+				@apply text-2xl flex items-center pt-1;
+			}
+
+			.tech {
+				> div {
+					@apply flex flex-row gap-2 flex-wrap;
+
+					> span {
+						@apply border-2 border-gray rounded-xl h-10 px-6 flex items-center;
+					}
+				}
+
+				> h3 {
+					@apply mb-6;
+				}
+			}
+
+			.buttons {
+				@apply min-w-full flex gap-2 justify-end;
+			}
+		}
+	}
+}

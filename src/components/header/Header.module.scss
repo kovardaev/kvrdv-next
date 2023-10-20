@@ -1,0 +1,30 @@
+.container {
+	@apply w-full rounded-3xl overflow-hidden relative;
+
+	> img {
+		@apply w-full;
+	}
+
+	> h1 {
+		@apply text-accent text-8xl absolute top-14 left-14 drop-shadow-lg uppercase;
+
+		animation: slide 1s;
+	}
+
+	> h3 {
+		@apply absolute bottom-14 left-14 drop-shadow-lg text-3xl;
+
+		animation: slide 1s;
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateY(-500%);
+		
+	}
+	100% {
+		transform: translateY(0);
+		
+	}
+}
