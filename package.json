@@ -1,5 +1,5 @@
 {
-	"homepage": "https://kvrdv.github.io/kvrdv-next",
+	"homepage": "https://kovardaev.github.io/kvrdv-next",
 	"name": "kvrdv-next",
 	"version": "0.2.0",
 	"private": true,
@@ -7,7 +7,7 @@
 	"author": {
 		"email": "contact@kovardaev.com",
 		"name": "Semyon Kovardaev",
-		"url": "https://github.com/kvrdv"
+		"url": "https://github.com/kovardaev"
 	},
 	"scripts": {
 		"dev": "next dev",
