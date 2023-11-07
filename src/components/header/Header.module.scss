@@ -6,25 +6,10 @@
 	}
 
 	> h1 {
-		@apply text-accent text-8xl absolute top-14 left-14 drop-shadow-lg uppercase;
-
-		animation: slide 1s;
+		@apply text-accent text-8xl absolute top-14 left-14 drop-shadow-lg uppercase animate-fadeIn;
 	}
 
 	> h3 {
-		@apply absolute bottom-14 left-14 drop-shadow-lg text-3xl;
-
-		animation: slide 1s;
-	}
-}
-
-@keyframes slide {
-	0% {
-		transform: translateY(-500%);
-		
-	}
-	100% {
-		transform: translateY(0);
-		
+		@apply absolute bottom-14 left-14 drop-shadow-lg text-3xl animate-fadeIn;
 	}
 }

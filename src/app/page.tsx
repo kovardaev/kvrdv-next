@@ -5,10 +5,13 @@ import ava from '../assets/images/ava.png';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaFileDownload } from 'react-icons/fa';
+import { BsPersonSquare } from 'react-icons/bs';
 import Button from '@/components/ui/button/Button';
 import data from './home.data';
 import { LanguageContext } from '@/context/Context';
 import { useContext } from 'react';
+
+
 
 export default function Home() {
 	const { language } = useContext(LanguageContext);
@@ -17,34 +20,37 @@ export default function Home() {
 
 	return (
 		<main className={styles.container}>
-			<div className={styles.imagesContainer}>
-				<Image
-					src={ava}
-					quality={100}
-					width={240}
-					alt={content.avaAlt}
-					draggable={false}
-				/>
-			</div>
-			<div className={styles.infoContainer}>
-				<div>
+			<div className={styles.bio}>
+				<div className={styles.block}>
 					<h3>
 						<FaInfoCircle className={styles.icon} size={22} />
 						{content.aboutHeader}
 					</h3>
 					<p>{content.aboutContent}</p>
 				</div>
-				<div>
-					<h3>
-						<FaLinkedin className={styles.icon} size={22} />
-						{content.linkedInHeader}
-					</h3>
-					<Button
-						title={content.linkedInButton}
-						link={'https://www.linkedin.com/in/kvrdv'}
-					/>
+				<div className={styles.resume}>
+					<div className={styles.block}>
+						<h3>
+							<FaLinkedin className={styles.icon} size={22} />
+							{content.linkedInHeader}
+						</h3>
+						<Button
+							title={content.linkedInButton}
+							link={'https://www.linkedin.com/in/kvrdv'}
+						/>
+					</div>
+					<div className={styles.block}>
+						<h3>
+							<BsPersonSquare className={styles.icon} size={22} />
+							{content.headHunterHeader}
+						</h3>
+						<Button
+							title={content.headHunterButton}
+							link={'https://hh.ru/resume/69d96dc3ff0c7d57df0039ed1f4d77444f747a'}
+						/>
+					</div>
 				</div>
-				<div>
+				<div className={styles.block}>
 					<h3>
 						<FaFileDownload className={styles.icon} size={20} />
 						{content.downloadHeader}

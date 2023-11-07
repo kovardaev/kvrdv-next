@@ -2,12 +2,10 @@
 	@apply flex flex-row gap-2;
 
 	> div {
-		@apply flex flex-col gap-2;
-
-		width: 50%;
+		@apply flex flex-col gap-2 w-1/2;
 
 		.project {
-			@apply bg-dark rounded-xl p-14 text-white [&>*:nth-child(2)]:my-10 flex flex-col;
+			@apply bg-dark rounded-xl p-14 text-white [&>*:nth-child(2)]:my-10 flex flex-col animate-fadeIn;
 
 			.info {
 				@apply flex flex-col max-w-fit;
@@ -21,7 +19,7 @@
 				}
 
 				> p {
-					@apply font-light;
+					@apply font-light border-l-2 border-gray pl-6;
 				}
 			}
 
@@ -31,7 +29,7 @@
 
 			.tech {
 				> div {
-					@apply flex flex-row gap-2 flex-wrap;
+					@apply flex flex-row gap-1 flex-wrap;
 
 					> span {
 						@apply border-2 border-gray rounded-xl h-10 px-6 flex items-center;
@@ -44,8 +42,216 @@
 			}
 
 			.buttons {
-				@apply min-w-full flex gap-2 justify-end;
+				@apply min-w-full flex gap-4 justify-end;
 			}
 		}
 	}
 }
+
+// @keyframes fadeInUp {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(0, 20px, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInUp {
+// 	animation-name: fadeInUp;
+// }
+
+// /* Trigger  */
+// .animated {
+// 	animation-duration: 1s;
+// 	animation-fill-mode: both;
+// }
+
+// /* Optional Delays, change values here  */
+// .one {
+// 	animation-delay: 0.2s;
+// }
+// .two {
+// 	animation-delay: 0.6s;
+// }
+// .three {
+// 	animation-delay: 1s;
+// }
+// .four {
+// 	animation-delay: 1.4s;
+// }
+
+// /* Animations start here  */
+
+// /* FADE IN  */
+
+// @keyframes fadeIn {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+// .fadeIn {
+// 	animation-name: fadeIn;
+// }
+
+// /* FADE IN DOWN */
+
+// @keyframes fadeInDown {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(0, -100%, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInDown {
+// 	animation-name: fadeInDown;
+// }
+
+// /* FADE IN UP */
+
+// @keyframes fadeInUp {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(0, 20px, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInUp {
+// 	animation-name: fadeInUp;
+// }
+
+// /* FADE IN UP BIG */
+
+// @keyframes fadeInUpBig {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(0, 100px, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInUpBig {
+// 	animation-name: fadeInUpBig;
+// }
+
+// /* FADE IN LEFT */
+
+// @keyframes fadeInLeft {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(-30px, 0, 0) rotateZ(30deg);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInLeft {
+// 	animation-name: fadeInLeft;
+// }
+
+// /* FADE IN LEFT BIG */
+
+// @keyframes fadeInLeftBig {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(-100px, 0, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInLeftBig {
+// 	animation-name: fadeInLeftBig;
+// }
+
+// /* FADE IN RIGHT */
+
+// @keyframes fadeInRight {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(100%, 0, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+// .fadeInRight {
+// 	animation-name: fadeInRight;
+// }
+
+// /* @end standaard animaties  */
+
+// .callout {
+// 	max-width: 500px;
+// 	margin: 0 auto;
+// 	padding-bottom: 100px;
+// }
+
+// .test.in-view {
+// 	animation: fadeInUp 2s;
+// }
+
+// .test2.in-view {
+// 	animation: fadeInLeftBig;
+// 	animation-duration: 1s;
+// 	animation-delay: 0s;
+// 	animation-fill-mode: both;
+// 	backface-visibility: hidden;
+// }
+
+// $(document).ready(function() {
+
+//     /** ---------------------------- //
+//      *  @group viewport trigger script
+//      * for adding or removing classes from elements in view within viewport
+//     */
+
+//     var $animationElements = $('.animation-element');
+//     var $window = $(window);
+
+//     // ps: Let's FIRST disable triggering on small devices!
+//     var isMobile = window.matchMedia("only screen and (max-width: 768px)");
+//     if (isMobile.matches) {
+//         $animationElements.removeClass('animation-element');
+//     }
+
+//     function checkIfInView() {
+
+//         var windowHeight = $window.height();
+//         var windowTopPosition = $window.scrollTop();
+//         var windowBottomPosition = (windowTopPosition + windowHeight);
+
+//         $.each($animationElements, function () {
+//             var $element = $(this);
+//             var elementHeight = $element.outerHeight();
+//             var elementTopPosition = $element.offset().top;
+//             var elementBottomPosition = (elementTopPosition + elementHeight);
+
+// //check to see if this current container is within viewport
+//             if ((elementBottomPosition >= windowTopPosition) &&
+//                 (elementTopPosition <= windowBottomPosition)) {
+//                 $element.addClass('in-view');
+//             } else {
+//                 $element.removeClass('in-view');
+//             }
+//         });
+//     }
+
+//     $window.on('scroll resize', checkIfInView);
+//     $window.trigger('scroll');
+// });

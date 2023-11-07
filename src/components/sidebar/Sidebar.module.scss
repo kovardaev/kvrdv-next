@@ -1,42 +1,36 @@
 .container {
-	@apply bg-dark rounded-3xl h-full py-6 flex flex-col justify-between dark:bg-accent;
+	@apply bg-dark rounded-3xl h-full py-6 flex flex-col justify-between dark:bg-accent min-w-265px;
 
-	min-width: 265px;
-}
+	.nav {
+		@apply text-white px-14 animate-fadeIn;
 
-.theme {
-	> div {
-		@apply first:my-6;
+		> h3 {
+			@apply text-2xl h-14 flex items-center;
+		}
 
 		> ul {
 			> li {
-				@apply flex items-center w-full px-14 h-14 cursor-pointer;
+				@apply flex items-center h-14 w-full;
+
+				span {
+					@apply hover:opacity-70 transition-all cursor-pointer;
+
+					&.active {
+						@apply text-accent;
+					}
+				}
 			}
 		}
 	}
-}
 
-.nav {
-	@apply text-white;
+	.theme {
+		> div {
+			@apply first:my-6;
 
-	> h3 {
-		@apply text-2xl px-14 h-14 flex items-center;
-	}
-
-	> ul {
-		> li {
-			@apply h-14 hover:text-gray hover:bg-accent transition-all;
-
-			> a {
-				@apply flex items-center h-full w-full px-14;
-			}
-
-			&.active {
-				@apply text-accent hover:text-gray;
-			}
-
-			.icon {
-				@apply mr-2;
+			> ul {
+				> li {
+					@apply flex items-center w-full h-14 cursor-pointer;
+				}
 			}
 		}
 	}

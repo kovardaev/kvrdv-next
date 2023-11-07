@@ -5,8 +5,8 @@ interface IProjectProps {
 	infoRu: string;
 	techStack: string[];
 	image?: string;
-    linkGit?: string;
-    linkDeploy?: string;
+	linkGit?: string;
+	linkDeploy?: string;
 }
 
 export default IProjectProps;

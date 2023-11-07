@@ -64,8 +64,8 @@ const Header: FC = () => {
 				alt={'abstract header'}
 				draggable={false}
 			/>
-			<h1>{header}</h1>
-			<h3>{subHeader}</h3>
+			<h1 id="header-head">{header}</h1>
+			<h3 id="header-sub">{subHeader}</h3>
 		</div>
 	);
 };

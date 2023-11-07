@@ -1,30 +1,20 @@
 .body {
-	@apply bg-black dark:bg-white h-screen p-2;
-
-	display: grid;
-	gap: 8px;
-	grid-template-columns: max-content auto;
+	@apply bg-black dark:bg-white h-screen p-2 grid gap-2 grid-cols-max-content-auto;
 
 	.content {
-		overflow-y: scroll;
+		@apply overflow-y-scroll;
 	}
 }
 
 .container {
 	@apply py-14 bg-dark rounded-3xl flex text-white justify-center;
 
-	.imagesContainer {
-		@apply flex overflow-hidden pr-14;
+	.bio {
+		@apply [&>*:nth-child(2)]:my-14 animate-fadeIn;
 
-		> img {
-			@apply self-start;
-		}
-	}
+		.block {
+			@apply border-l-2 border-gray pl-14;
 
-	.infoContainer {
-		@apply [&>*:nth-child(2)]:my-14;
-
-		> div {
 			> h3 {
 				@apply text-2xl flex items-center pt-1 mb-6;
 
@@ -34,15 +24,18 @@
 			}
 
 			> p {
-				@apply font-light;
-				max-width: 600px;
+				@apply font-light max-w-600px;
 			}
 
 			> div {
 				> button {
-					@apply first:mr-2;
+					@apply first:mr-4;
 				}
 			}
+		}
+
+		.resume {
+			@apply flex flex-col gap-14;
 		}
 	}
 }

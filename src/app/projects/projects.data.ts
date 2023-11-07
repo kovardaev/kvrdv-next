@@ -51,7 +51,7 @@ const projectsData = [
 		linkDeploy: 'https://kvrdv.github.io/avifly/',
 	},
 	{
-		name: 'Kovardaev',
+		name: 'KVRDV',
 		infoEn: `My portfolio site contains a variety of web projects that I have created as a frontend programmer. 
 			It is a collection of my professional work and skills in the field of web development`,
 		infoRu: `Мой сайт-портфолио содержит разнообразные веб-проекты, которые я создал как frontend программист. 

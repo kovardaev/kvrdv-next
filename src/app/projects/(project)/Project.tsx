@@ -35,7 +35,7 @@ const Project: FC = ({
 				<p>{language === 'en' ? infoEn : infoRu}</p>
 			</div>
 			<div className={styles.tech}>
-				<h3>{language === 'en' ? 'Tech stack' : 'Стек технологий'}</h3>
+				<h3>{language === 'en' ? 'Tech stack:' : 'Стек технологий:'}</h3>
 				<div className={styles.tech}>
 					{techStack.map((element) => {
 						return <span>{element}</span>;

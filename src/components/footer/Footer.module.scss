@@ -1,4 +1,11 @@
 .container {
-	@apply text-gray bg-dark text-xl mt-2 h-20 rounded-full flex justify-end border-2
-	 border-dark items-center px-14;
+	@apply text-gray bg-dark text-2xl mt-2 h-20 rounded-full flex justify-between items-center px-14;
+
+	.logos {
+		@apply flex gap-6;
+
+		.logo {
+			@apply w-9 hover:opacity-70 transition-all;
+		}
+	}
 }
